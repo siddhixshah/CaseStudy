@@ -206,4 +206,66 @@ with c6:
     df_gantt = pd.DataFrame([
         dict(Task="Phase 1: Liquidity (Bulk Sales)", Start='2025-01-01', Finish='2025-03-30', Phase='Stabilize'),
         dict(Task="Vendor Payment Clearing", Start='2025-02-15', Finish='2025-04-01', Phase='Stabilize'),
-        dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='20
+        dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='2025-04-01', Finish='2025-08-30', Phase='Pivot'),
+        dict(Task="ERP Clean-up (AI Integration)", Start='2025-03-01', Finish='2025-06-01', Phase='Pivot'),
+        dict(Task="Launch 'Carbon Neutral' Phone", Start='2025-09-01', Finish='2025-12-31', Phase='Grow'),
+        dict(Task="CCTS Carbon Credit Trading", Start='2025-10-01', Finish='2025-12-31', Phase='Grow')
+    ])
+    fig_gantt = px.timeline(df_gantt, x_start="Start", x_end="Finish", y="Task", color="Phase",
+                            color_discrete_map={"Stabilize": "#e63946", "Pivot": "#f4a261", "Grow": "#2a9d8f"})
+    fig_gantt.update_yaxes(autorange="reversed")
+    fig_gantt.update_layout(height=300, margin=dict(l=20, r=20, t=20, b=20), plot_bgcolor='#ffffff')
+    st.plotly_chart(fig_gantt, use_container_width=True)
+
+# --- ROW 5: TURNAROUND SWOT (NEW) ---
+st.markdown("### 5. TURNAROUND SWOT (THE REALITY CHECK)")
+
+swot1, swot2, swot3, swot4 = st.columns(4)
+
+with swot1:
+    st.markdown("""
+    <div class="section-box" style="border-top: 3px solid #2a9d8f;">
+    <b>STRENGTH (Internal)</b><br>
+    - Fully owned Manufacturing Plant (Asset Rich).<br>
+    - Service Center Network (High Trust).<br>
+    - 10 Years of Customer Data.
+    </div>
+    """, unsafe_allow_html=True)
+
+with swot2:
+    st.markdown("""
+    <div class="section-box" style="border-top: 3px solid #e63946;">
+    <b>WEAKNESS (Internal)</b><br>
+    - Cash Crunch (Liquidity Crisis).<br>
+    - Brand Perception ("Old School").<br>
+    - Outdated ERP/Tech Stack.
+    </div>
+    """, unsafe_allow_html=True)
+
+with swot3:
+    st.markdown("""
+    <div class="section-box" style="border-top: 3px solid #2a9d8f;">
+    <b>OPPORTUNITY (External)</b><br>
+    - <b>CCTS/CBAM:</b> Carbon Credit Revenue.<br>
+    - <b>China+1:</b> JVs with Lianchuang/Sunwoda.<br>
+    - <b>Tier 2 Aspiration:</b> Green Tech status.
+    </div>
+    """, unsafe_allow_html=True)
+
+with swot4:
+    st.markdown("""
+    <div class="section-box" style="border-top: 3px solid #e63946;">
+    <b>THREAT (External)</b><br>
+    - <b>Dixon:</b> Aggressive capacity expansion.<br>
+    - <b>Vendor Revolt:</b> If payments delayed >90 days.<br>
+    - <b>Tech Obsolescence:</b> AI moving too fast.
+    </div>
+    """, unsafe_allow_html=True)
+
+# --- FOOTER ---
+st.markdown("""
+<div class="kicker-box">
+⚠️ IMMEDIATE ASK: APPROVAL TO LIQUIDATE 15,000 UNITS AT 0% MARGIN (CTC) BY MONTH END.<br>
+<span style="font-size: 0.9rem; font-weight: normal;">This unlocks the ₹12 Cr needed to sign the JV deals and pay critical vendors.</span>
+</div>
+""", unsafe_allow_html=True)
