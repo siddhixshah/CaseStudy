@@ -1,10 +1,18 @@
 """
 -----------------------------------------------------------------------------
-XYZ MOBILES: A2 STRATEGIC POSTER (BOARDROOM EDITION)
+XYZ MOBILES: STRATEGIC TURNAROUND DASHBOARD (FINAL HYBRID VERSION)
 -----------------------------------------------------------------------------
-HOW TO RUN:
+
+HOW TO RUN LOCALLY:
 1. pip install streamlit pandas plotly
 2. streamlit run app.py
+
+HOW TO DEPLOY TO GITHUB/STREAMLIT CLOUD:
+1. Create 'requirements.txt' with:
+   streamlit
+   pandas
+   plotly
+2. Push both files to GitHub.
 -----------------------------------------------------------------------------
 """
 
@@ -13,259 +21,176 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 
-# --- PAGE CONFIGURATION (Wide Mode for Poster Feel) ---
+# --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="XYZ Strategic Reset",
+    page_title="XYZ Strategic Turnaround",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# --- CUSTOM CSS FOR A2 POSTER LOOK ---
+# --- CUSTOM CSS FOR "REPORT" LOOK ---
 st.markdown("""
     <style>
-    /* Global Styles */
-    .main { background-color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-    h1 { color: #0f2b46; font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 5px; text-transform: uppercase; }
-    h2 { color: #555; font-size: 1.2rem; font-weight: 400; margin-top: 0; border-bottom: 4px solid #0f2b46; padding-bottom: 20px; }
-    h3 { color: #0f2b46; font-size: 1.4rem; font-weight: 800; border-left: 5px solid #ffcc00; padding-left: 10px; margin-top: 25px; }
+    /* Global Font & Spacing */
+    .main { background-color: #ffffff; color: #333333; font-family: 'Arial', sans-serif; }
+    h1 { color: #003366; font-size: 2.2rem; font-weight: 800; margin-bottom: 0px; }
+    h3 { color: #003366; font-size: 1.2rem; font-weight: 700; margin-top: 20px; border-bottom: 2px solid #ddd; padding-bottom: 5px; }
+    p, li { font-size: 0.95rem; line-height: 1.5; color: #444; }
     
-    /* Box Styles */
-    .section-box { border: 1px solid #e0e0e0; background-color: #f9f9f9; padding: 15px; border-radius: 4px; height: 100%; }
-    .highlight-box { background-color: #e8f4f8; border-left: 5px solid #007bb5; padding: 15px; margin-bottom: 15px; }
-    .urgent-box { background-color: #fff5f5; border-left: 5px solid #d9534f; padding: 15px; margin-bottom: 15px; }
-    .kicker-box { background-color: #0f2b46; color: white; padding: 20px; text-align: center; font-size: 1.2rem; font-weight: bold; margin-top: 40px; border-radius: 8px; }
+    /* Custom Boxes */
+    .insight-box {
+        background-color: #eef4fa; border-left: 5px solid #003366;
+        padding: 15px; border-radius: 4px; margin-bottom: 10px;
+    }
+    .problem-box {
+        background-color: #fff0f0; border-left: 5px solid #cc0000;
+        padding: 15px; border-radius: 4px; margin-bottom: 10px;
+    }
+    .strategy-card {
+        background-color: #f8f9fa; border: 1px solid #ddd;
+        padding: 15px; border-radius: 5px; height: 100%;
+    }
+    .kicker-box {
+        background-color: #003366; color: white; padding: 15px;
+        text-align: center; font-weight: bold; font-size: 1.1rem;
+        border-radius: 5px; margin-top: 30px; margin-bottom: 20px;
+    }
+    .metric-value { font-size: 1.8rem; font-weight: 800; color: #003366; margin: 0; }
+    .metric-label { font-size: 0.85rem; color: #666; margin: 0; }
     
-    /* Text Styles */
-    .metric-big { font-size: 2.2rem; font-weight: 800; color: #0f2b46; line-height: 1; }
-    .metric-small { font-size: 0.9rem; color: #666; font-weight: 500; }
-    .table-header { font-weight: bold; color: #0f2b46; border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; }
-    
-    /* Hiding Streamlit Branding */
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    /* Table Styling to match Report Look */
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { background-color: #003366; color: white; text-align: left; padding: 8px; font-size: 0.9rem; }
+    td { border-bottom: 1px solid #ddd; padding: 8px; font-size: 0.9rem; color: #333; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
     </style>
 """, unsafe_allow_html=True)
 
-# --- TITLE SECTION ---
-st.title("PROJECT RESET: STRATEGIC TURNAROUND PLAN")
-st.markdown("## FROM 'CASH TRAP' TO 'SUSTAINABLE ECOSYSTEM' | FY 2025-26 ROADMAP")
+# --- HEADER ---
+st.title("XYZ MOBILES: FY25-26 STRATEGIC TURNAROUND")
+st.markdown("**OBJECTIVE:** Stabilize Cash Flow (Q1) -> Pivot Manufacturing (Q2) -> Rebrand as Green Tech (Q3)")
 
-# --- ROW 1: CONTEXT & INSIGHT ---
-col1, col2 = st.columns([1, 2])
+st.markdown("---")
 
-with col1:
+# --- ROW 1: THE REALITY CHECK ---
+c1, c2 = st.columns([1, 2])
+
+with c1:
+    st.markdown("### 🛑 THE INERTIA TRAP (Problem Statement)")
     st.markdown("""
-    <div class="urgent-box">
-    <b>🛑 THE URGENT REALITY (THE BLEED)</b><br>
-    We are fighting a losing battle in the "Red Ocean" of budget phones.
-    <ul style="margin-top:5px; padding-left:20px;">
-        <li><b>Cash Locked:</b> ₹25 Cr in depreciating inventory (Models X, Y).</li>
-        <li><b>Idle Asset:</b> Factory running at only 30% capacity.</li>
-        <li><b>Competition:</b> Dixon & Foxconn own the volume game; we cannot compete on price.</li>
+    <div class="problem-box">
+    <b>Cash Trap:</b> ₹25 Cr locked in depreciating inventory.<br>
+    <b>Asset Idle:</b> Factory running at 30% capacity.<br>
+    <b>Brand:</b> Losing the "Feature War" to Xiaomi/Samsung.
+    </div>
+    """, unsafe_allow_html=True)
+
+with c2:
+    st.markdown("### 💡 THE VALUE SHIFT (Primary Insight)")
+    st.markdown("""
+    <div class="insight-box">
+    <b>Stop fighting the "Specs War". Start fighting the "Ecosystem War".</b><br>
+    We cannot win on <i>Selling Phones</i> right now. We win by:<br>
+    1. Monetizing our <b>Factory</b> (B2B Manufacturing for others).<br>
+    2. Positioning our <b>Brand</b> where they aren't: <b>Sustainability (Green Tech).</b>
+    </div>
+    """, unsafe_allow_html=True)
+
+# --- ROW 2: THE 3-POINT BATTLE PLAN ---
+st.markdown("### ⚔️ 3-POINT ACTION PLAN (EXECUTION)")
+
+c_p1, c_p2, c_p3 = st.columns(3)
+
+with c_p1:
+    st.markdown("""
+    <div class="strategy-card">
+    <b>1. LIQUIDITY (The Cash Engine)</b><br>
+    <i>Goal: Unlock ₹12 Cr by March</i>
+    <hr style="margin:5px 0;">
+    <ul>
+    <li><b>Corporate Bulk Exit:</b> Sell 15k units to Logistics/Pharma (e.g., Delhivery, Sun Pharma) for field staff. <b>Price: At Cost.</b></li>
+    <li><b>Spare Parts Harvest:</b> Dismantle 'Dead Stock'. Reuse screens/batteries for Service Centers (Save 15% procurement cost).</li>
+    <li><b>Coupon Lock-in:</b> Don't discount; give existing users a <b>₹5k Deferred Coupon</b> for future "Green" products.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
 
-with col2:
+with c_p2:
     st.markdown("""
-    <div class="highlight-box">
-    <b>💡 THE STRATEGIC PIVOT (THE BLUE OCEAN)</b><br>
-    <b>Don't sell phones. Sell "Green Utility".</b><br>
-    Our survival depends on a "Hybrid Pivot":
-    <ol style="margin-top:5px; padding-left:20px;">
-        <li><b>Manufacturing (B2B):</b> Become a specialized "Component Hub" for Chinese JVs (Lianchuang/Sunwoda) avoiding tariffs.</li>
-        <li><b>Brand (B2C):</b> Pivot the consumer brand to <b>"India's First Carbon-Neutral Tech"</b>. Own the niche nobody else is touching.</li>
-    </ol>
+    <div class="strategy-card">
+    <b>2. ASSETS (The Manufacturing Pivot)</b><br>
+    <i>Goal: 85% Utilization by Q3</i>
+    <hr style="margin:5px 0;">
+    <ul>
+    <li><b>JV Strategy:</b> "Complement, Don't Compete." Partner with <b>Sunwoda</b> (Wireless Charging) or <b>Lianchuang</b> (Optics).</li>
+    <li><b>Nvidia/AI Angle:</b> Pivot Line 2 to <b>OSAT</b> (Assembly & Test) for Edge AI modules. Higher margin, low competition.</li>
+    <li><b>China+1 Play:</b> Offer our facility as the "Indian Assembly Hub" to component makers avoiding tariffs.</li>
+    </ul>
     </div>
     """, unsafe_allow_html=True)
 
-# --- ROW 2: STRATEGIC PARTNERSHIP LANDSCAPE (NEW) ---
-st.markdown("### 1. STRATEGIC PARTNERSHIP LANDSCAPE (THE 'WHO')")
-st.markdown("<i>Targeting 'China+1' players who need Indian assembly to bypass import duties.</i>")
+with c_p3:
+    st.markdown("""
+    <div class="strategy-card">
+    <b>3. BRAND (The Green Differentiator)</b><br>
+    <i>Goal: New Revenue Stream via Carbon</i>
+    <hr style="margin:5px 0;">
+    <ul>
+    <li><b>EU CBAM Readiness:</b> Prepare for European 'Carbon Border Tax'. Become the <i>only</i> India-ready exporter.</li>
+    <li><b>CCTS Revenue:</b> Earn & Trade credits on the <b>Indian Carbon Market</b> by solar-roofing the plant.</li>
+    <li><b>The "Carbon-Neutral" Phone:</b> Marketing USP for Gen Z. "This phone planted 10 trees."</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Creating a clean HTML table for layout control
+# --- NEW SECTION: PARTNERSHIP TABLE (INSERTED AS REQUESTED) ---
+st.markdown("### 🤝 STRATEGIC PARTNERSHIP LANDSCAPE (TARGETS)")
 st.markdown("""
-<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
-  <tr style="background-color: #0f2b46; color: white; text-align: left;">
-    <th style="padding: 10px;">TARGET PARTNER</th>
-    <th style="padding: 10px;">THEIR PAIN POINT</th>
-    <th style="padding: 10px;">OUR PITCH (THE VALUE PROP)</th>
-    <th style="padding: 10px;">EST. IMPACT</th>
-  </tr>
-  <tr style="border-bottom: 1px solid #ddd;">
-    <td style="padding: 10px;"><b>SUNWODA</b><br>(Batteries/Power)</td>
-    <td style="padding: 10px;">Needs capacity for EV/Power Walls in India but building new plants takes 18 months.</td>
-    <td style="padding: 10px;">"We give you Line 3 for <b>Wireless Charging Coil</b> assembly immediately. No Capex for you."</td>
-    <td style="padding: 10px;"><b>40%</b> Utilization</td>
-  </tr>
-  <tr style="border-bottom: 1px solid #ddd;">
-    <td style="padding: 10px;"><b>LIANCHUANG</b><br>(Optics/Lenses)</td>
-    <td style="padding: 10px;">Investing $50M in India (Apr '25 news) but needs quick "Optical Module" assembly to supply Vivo/Oppo.</td>
-    <td style="padding: 10px;">"We become your <b>Precision Assembly Hub</b>. We handle the labor; you bring the tech."</td>
-    <td style="padding: 10px;"><b>12%</b> Margin</td>
+<table>
+  <tr>
+    <th style="width:20%">TARGET PARTNER</th>
+    <th style="width:35%">THEIR PAIN POINT (WHY THEM?)</th>
+    <th style="width:35%">OUR PITCH (THE VALUE PROP)</th>
+    <th style="width:10%">IMPACT</th>
   </tr>
   <tr>
-    <td style="padding: 10px;"><b>NVIDIA PARTNERS</b><br>(Edge AI)</td>
-    <td style="padding: 10px;">High demand for "Jetson" AI modules in robotics; few Indian assemblers have clean rooms.</td>
-    <td style="padding: 10px;">"Pivot Line 1 to <b>OSAT (Assembly & Test)</b> for high-margin AI hardware."</td>
-    <td style="padding: 10px;"><b>Future Proofing</b></td>
+    <td><b>SUNWODA</b><br>(Batteries/Power)</td>
+    <td>Needs immediate capacity for EV/Power Walls in India; building new plants takes 18 months.</td>
+    <td>"We give you Line 3 for <b>Wireless Charging Coil</b> assembly immediately. Zero Capex for you."</td>
+    <td><b>40%</b> Util.</td>
+  </tr>
+  <tr>
+    <td><b>LIANCHUANG</b><br>(Optics/Lenses)</td>
+    <td>Investing $50M in India (Apr '25 news) but needs quick "Optical Module" assembly to supply Vivo/Oppo.</td>
+    <td>"We become your <b>Precision Assembly Hub</b>. We handle the labor; you bring the tech."</td>
+    <td><b>12%</b> Margin</td>
+  </tr>
+  <tr>
+    <td><b>NVIDIA PARTNERS</b><br>(Edge AI Hardware)</td>
+    <td>High demand for "Jetson" AI modules in robotics; few Indian assemblers have clean rooms.</td>
+    <td>"Pivot Line 1 to <b>OSAT (Assembly & Test)</b> for high-margin AI hardware."</td>
+    <td><b>Future Proof</b></td>
   </tr>
 </table>
 """, unsafe_allow_html=True)
 
-# --- ROW 3: COMPETITIVE BENCHMARKING (NEW) ---
-c3, c4 = st.columns([1, 1])
+st.write("") # Spacer
 
-with c3:
-    st.markdown("### 2. THE SHIFT: RED vs BLUE OCEAN")
-    
-    # Scatter plot for Positioning
-    df_pos = pd.DataFrame({
-        'Brand': ['Xiaomi/Samsung', 'Dixon (White Label)', 'XYZ (OLD)', 'Fairphone (Global)', 'XYZ (NEW)'],
-        'Price': [8, 4, 5, 9, 6],  # X-axis
-        'Sustainability': [2, 1, 1, 10, 9], # Y-axis
-        'Size': [80, 60, 30, 40, 60],
-        'Color': ['red', 'grey', 'red', 'green', 'blue']
-    })
-    
-    fig_pos = px.scatter(df_pos, x='Price', y='Sustainability', text='Brand', size='Size', 
-                         color='Color', color_discrete_map={'red':'#e63946', 'grey':'#a8dadc', 'green':'#2a9d8f', 'blue':'#457b9d'},
-                         title="Brand Positioning Matrix")
-    fig_pos.update_traces(textposition='top center')
-    fig_pos.update_layout(
-        xaxis_title="Price Point", 
-        yaxis_title="Sustainability / Green Cert",
-        showlegend=False,
-        height=300,
-        margin=dict(l=20, r=20, t=40, b=20),
-        plot_bgcolor='#f9f9f9'
-    )
-    st.plotly_chart(fig_pos, use_container_width=True)
+# --- ROW 3: FINANCIALS & ROADMAP ---
+c_fin, c_road = st.columns([1, 1])
 
-with c4:
-    st.markdown("### 3. COMPETITIVE LANDSCAPE (INDIA)")
-    st.markdown("""
-    <div class="section-box">
-    <table style="width:100%; font-size: 0.9rem;">
-      <tr style="border-bottom: 2px solid #ddd;">
-        <th style="text-align:left;">FEATURE</th>
-        <th style="text-align:left;">DIXON / FOXCONN</th>
-        <th style="text-align:left; color:#007bb5;">XYZ (THE PIVOT)</th>
-      </tr>
-      <tr>
-        <td><b>Core Game</b></td>
-        <td>Volume (Millions of units)</td>
-        <td style="color:#007bb5;"><b>Niche (Sustainability + Components)</b></td>
-      </tr>
-      <tr>
-        <td><b>Margin</b></td>
-        <td>Razor Thin (3-4%)</td>
-        <td style="color:#007bb5;"><b>Healthy (8-12%)</b></td>
-      </tr>
-      <tr>
-        <td><b>Regulatory</b></td>
-        <td>PLI Dependent</td>
-        <td style="color:#007bb5;"><b>CCTS / CBAM Compliant</b></td>
-      </tr>
-      <tr>
-        <td><b>Inventory</b></td>
-        <td>High Risk</td>
-        <td style="color:#007bb5;"><b>Just-in-Time (Contract Mfg)</b></td>
-      </tr>
-    </table>
-    <br>
-    <i><b>Insight:</b> We cannot beat Dixon on volume. We beat them by being the "Greenest" and "Most Flexible".</i>
-    </div>
-    """, unsafe_allow_html=True)
-
-# --- ROW 4: EXECUTION & FINANCIALS ---
-st.markdown("### 4. EXECUTION ROADMAP & FINANCIAL IMPACT")
-
-c5, c6 = st.columns([1, 1])
-
-with c5:
-    st.markdown("**💰 FINANCIAL RECOVERY BRIDGE (₹ Cr)**")
-    # Waterfall Chart
-    fig_water = go.Figure(go.Waterfall(
+with c_fin:
+    st.markdown("### 💰 FINANCIAL RECOVERY (WATERFALL)")
+    # Data for Waterfall
+    fig_waterfall = go.Figure(go.Waterfall(
         name = "20", orientation = "v",
         measure = ["relative", "relative", "relative", "relative", "relative", "relative", "total"],
         x = ["Deficit", "Bulk Sale", "Scrap Harvest", "Coupon Rev", "JV Rent", "OpEx Savings", "Net Cash"],
         text = ["-25", "+12", "+3.5", "+4.0", "+8.0", "+2.5", "5.0"],
         y = [-25, 12, 3.5, 4.0, 8.0, 2.5, 0],
         connector = {"line":{"color":"rgb(63, 63, 63)"}},
-        decreasing = {"marker":{"color":"#e63946"}},
-        increasing = {"marker":{"color":"#2a9d8f"}},
-        totals = {"marker":{"color":"#1d3557"}}
+        decreasing = {"marker":{"color":"#cc0000"}},
+        increasing = {"marker":{"color":"#009933"}},
+        totals = {"marker":{"color":"#003366"}}
     ))
-    fig_water.update_layout(height=300, margin=dict(l=20, r=20, t=20, b=20), plot_bgcolor='#ffffff')
-    st.plotly_chart(fig_water, use_container_width=True)
-
-with c6:
-    st.markdown("**🗓️ 12-MONTH GANTT CHART**")
-    # Gantt Data
-    df_gantt = pd.DataFrame([
-        dict(Task="Phase 1: Liquidity (Bulk Sales)", Start='2025-01-01', Finish='2025-03-30', Phase='Stabilize'),
-        dict(Task="Vendor Payment Clearing", Start='2025-02-15', Finish='2025-04-01', Phase='Stabilize'),
-        dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='2025-04-01', Finish='2025-08-30', Phase='Pivot'),
-        dict(Task="ERP Clean-up (AI Integration)", Start='2025-03-01', Finish='2025-06-01', Phase='Pivot'),
-        dict(Task="Launch 'Carbon Neutral' Phone", Start='2025-09-01', Finish='2025-12-31', Phase='Grow'),
-        dict(Task="CCTS Carbon Credit Trading", Start='2025-10-01', Finish='2025-12-31', Phase='Grow')
-    ])
-    fig_gantt = px.timeline(df_gantt, x_start="Start", x_end="Finish", y="Task", color="Phase",
-                            color_discrete_map={"Stabilize": "#e63946", "Pivot": "#f4a261", "Grow": "#2a9d8f"})
-    fig_gantt.update_yaxes(autorange="reversed")
-    fig_gantt.update_layout(height=300, margin=dict(l=20, r=20, t=20, b=20), plot_bgcolor='#ffffff')
-    st.plotly_chart(fig_gantt, use_container_width=True)
-
-# --- ROW 5: TURNAROUND SWOT (NEW) ---
-st.markdown("### 5. TURNAROUND SWOT (THE REALITY CHECK)")
-
-swot1, swot2, swot3, swot4 = st.columns(4)
-
-with swot1:
-    st.markdown("""
-    <div class="section-box" style="border-top: 3px solid #2a9d8f;">
-    <b>STRENGTH (Internal)</b><br>
-    - Fully owned Manufacturing Plant (Asset Rich).<br>
-    - Service Center Network (High Trust).<br>
-    - 10 Years of Customer Data.
-    </div>
-    """, unsafe_allow_html=True)
-
-with swot2:
-    st.markdown("""
-    <div class="section-box" style="border-top: 3px solid #e63946;">
-    <b>WEAKNESS (Internal)</b><br>
-    - Cash Crunch (Liquidity Crisis).<br>
-    - Brand Perception ("Old School").<br>
-    - Outdated ERP/Tech Stack.
-    </div>
-    """, unsafe_allow_html=True)
-
-with swot3:
-    st.markdown("""
-    <div class="section-box" style="border-top: 3px solid #2a9d8f;">
-    <b>OPPORTUNITY (External)</b><br>
-    - <b>CCTS/CBAM:</b> Carbon Credit Revenue.<br>
-    - <b>China+1:</b> JVs with Lianchuang/Sunwoda.<br>
-    - <b>Tier 2 Aspiration:</b> Green Tech status.
-    </div>
-    """, unsafe_allow_html=True)
-
-with swot4:
-    st.markdown("""
-    <div class="section-box" style="border-top: 3px solid #e63946;">
-    <b>THREAT (External)</b><br>
-    - <b>Dixon:</b> Aggressive capacity expansion.<br>
-    - <b>Vendor Revolt:</b> If payments delayed >90 days.<br>
-    - <b>Tech Obsolescence:</b> AI moving too fast.
-    </div>
-    """, unsafe_allow_html=True)
-
-# --- FOOTER ---
-st.markdown("""
-<div class="kicker-box">
-⚠️ IMMEDIATE ASK: APPROVAL TO LIQUIDATE 15,000 UNITS AT 0% MARGIN (CTC) BY MONTH END.<br>
-<span style="font-size: 0.9rem; font-weight: normal;">This unlocks the ₹12 Cr needed to sign the JV deals and pay critical vendors.</span>
-</div>
-""", unsafe_allow_html=True)
+    fig_waterfall.update_layout(title="
