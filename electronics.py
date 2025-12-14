@@ -1,3 +1,25 @@
+"""
+-----------------------------------------------------------------------------
+XYZ MOBILES STRATEGY DASHBOARD
+-----------------------------------------------------------------------------
+
+HOW TO RUN LOCALLY:
+1. Open your terminal/command prompt.
+2. Run this command to install dependencies:
+   pip install streamlit pandas plotly
+3. Run the app:
+   streamlit run app.py
+
+HOW TO DEPLOY TO GITHUB/STREAMLIT CLOUD:
+1. Create a file named 'requirements.txt' in the same folder.
+2. Paste these three lines into it:
+   streamlit
+   pandas
+   plotly
+3. Push both files to GitHub.
+-----------------------------------------------------------------------------
+"""
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,49 +35,25 @@ st.set_page_config(
 # --- CUSTOM CSS FOR "CONSULTANT" LOOK ---
 st.markdown("""
     <style>
-    .main {
-        background-color: #f9f9f9;
-    }
-    h1 {
-        color: #0f2b46;
-        font-family: 'Helvetica', sans-serif;
-        font-weight: 700;
-        font-size: 2.5rem;
-    }
-    h2, h3 {
-        color: #2c3e50;
-        font-family: 'Helvetica', sans-serif;
-        font-weight: 600;
-    }
+    .main { background-color: #f9f9f9; }
+    h1 { color: #0f2b46; font-family: 'Helvetica', sans-serif; font-weight: 700; font-size: 2.5rem; }
+    h2, h3 { color: #2c3e50; font-family: 'Helvetica', sans-serif; font-weight: 600; }
     .metric-box {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 5px;
-        border-left: 5px solid #0f2b46;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background-color: #ffffff; padding: 20px; border-radius: 5px;
+        border-left: 5px solid #0f2b46; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         text-align: center;
     }
     .insight-box {
-        background-color: #e8f4f8;
-        padding: 15px;
-        border-radius: 5px;
-        color: #0f2b46;
-        font-weight: 500;
-        border: 1px solid #d1e7ef;
+        background-color: #e8f4f8; padding: 15px; border-radius: 5px;
+        color: #0f2b46; font-weight: 500; border: 1px solid #d1e7ef;
     }
     .urgent-box {
-        background-color: #fff3cd;
-        padding: 15px;
-        border-radius: 5px;
-        color: #856404;
-        border: 1px solid #ffeeba;
+        background-color: #fff3cd; padding: 15px; border-radius: 5px;
+        color: #856404; border: 1px solid #ffeeba;
     }
     .kicker-box {
-        background-color: #0f2b46;
-        color: white;
-        padding: 15px;
-        border-radius: 5px;
-        margin-top: 20px;
+        background-color: #0f2b46; color: white; padding: 15px;
+        border-radius: 5px; margin-top: 20px;
     }
     </style>
 """, unsafe_allow_html=True)
