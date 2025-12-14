@@ -180,13 +180,13 @@ with c_road:
 st.markdown("### 📊 PROJECTED IMPACT (FY26)")
 m1, m2, m3, m4 = st.columns(4)
 with m1:
-    st.markdown('<p class="metric-value">₹12 Cr</p><p class="metric-label">Immediate Cash Unlocked (Q1)</p>', unsafe_allow_html=True)
+    st.markdown("""<p class="metric-value">₹12 Cr</p><p class="metric-label">Immediate Cash Unlocked (Q1)</p>""", unsafe_allow_html=True)
 with m2:
-    st.markdown('<p class="metric-value">85%</p><p class="metric-label">Target Factory Utilization</p>', unsafe_allow_html=True)
+    st.markdown("""<p class="metric-value">85%</p><p class="metric-label">Target Factory Utilization</p>""", unsafe_allow_html=True)
 with m3:
-    st.markdown('<p class="metric-value">Zero</p><p class="metric-label">Dependencies on 'Pure' Phone Sales</p>', unsafe_allow_html=True)
+    st.markdown("""<p class="metric-value">Zero</p><p class="metric-label">Dependencies on 'Pure' Phone Sales</p>""", unsafe_allow_html=True)
 with m4:
-    st.markdown('<p class="metric-value">New IP</p><p class="metric-label">EU CBAM & CCTS Compliant</p>', unsafe_allow_html=True)
+    st.markdown("""<p class="metric-value">New IP</p><p class="metric-label">EU CBAM & CCTS Compliant</p>""", unsafe_allow_html=True)
 
 # --- FOOTER ---
 st.markdown("""
