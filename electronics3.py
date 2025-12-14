@@ -1,18 +1,6 @@
 """
 -----------------------------------------------------------------------------
-XYZ MOBILES: STRATEGIC TURNAROUND DASHBOARD (FINAL HYBRID VERSION)
------------------------------------------------------------------------------
-
-HOW TO RUN LOCALLY:
-1. pip install streamlit pandas plotly
-2. streamlit run app.py
-
-HOW TO DEPLOY TO GITHUB/STREAMLIT CLOUD:
-1. Create 'requirements.txt' with:
-   streamlit
-   pandas
-   plotly
-2. Push both files to GitHub.
+XYZ MOBILES: STRATEGIC TURNAROUND DASHBOARD (FINAL STABLE VERSION)
 -----------------------------------------------------------------------------
 """
 
@@ -58,7 +46,7 @@ st.markdown("""
     .metric-value { font-size: 1.8rem; font-weight: 800; color: #003366; margin: 0; }
     .metric-label { font-size: 0.85rem; color: #666; margin: 0; }
     
-    /* Table Styling to match Report Look */
+    /* Table Styling */
     table { width: 100%; border-collapse: collapse; margin-top: 10px; }
     th { background-color: #003366; color: white; text-align: left; padding: 8px; font-size: 0.9rem; }
     td { border-bottom: 1px solid #ddd; padding: 8px; font-size: 0.9rem; color: #333; }
@@ -79,7 +67,7 @@ with c1:
     st.markdown("### 🛑 THE INERTIA TRAP (Problem Statement)")
     st.markdown("""
     <div class="problem-box">
-    <b>Cash Trap:</b> ₹25 Cr locked in depreciating inventory.<br>
+    <b>Cash Trap:</b> INR 25 Cr locked in depreciating inventory.<br>
     <b>Asset Idle:</b> Factory running at 30% capacity.<br>
     <b>Brand:</b> Losing the "Feature War" to Xiaomi/Samsung.
     </div>
@@ -105,12 +93,12 @@ with c_p1:
     st.markdown("""
     <div class="strategy-card">
     <b>1. LIQUIDITY (The Cash Engine)</b><br>
-    <i>Goal: Unlock ₹12 Cr by March</i>
+    <i>Goal: Unlock INR 12 Cr by March</i>
     <hr style="margin:5px 0;">
     <ul>
     <li><b>Corporate Bulk Exit:</b> Sell 15k units to Logistics/Pharma (e.g., Delhivery, Sun Pharma) for field staff. <b>Price: At Cost.</b></li>
     <li><b>Spare Parts Harvest:</b> Dismantle 'Dead Stock'. Reuse screens/batteries for Service Centers (Save 15% procurement cost).</li>
-    <li><b>Coupon Lock-in:</b> Don't discount; give existing users a <b>₹5k Deferred Coupon</b> for future "Green" products.</li>
+    <li><b>Coupon Lock-in:</b> Don't discount; give existing users a <b>INR 5k Deferred Coupon</b> for future "Green" products.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -143,7 +131,7 @@ with c_p3:
     </div>
     """, unsafe_allow_html=True)
 
-# --- NEW SECTION: PARTNERSHIP TABLE (INSERTED AS REQUESTED) ---
+# --- NEW SECTION: PARTNERSHIP TABLE ---
 st.markdown("### 🤝 STRATEGIC PARTNERSHIP LANDSCAPE (TARGETS)")
 st.markdown("""
 <table>
@@ -193,4 +181,56 @@ with c_fin:
         increasing = {"marker":{"color":"#009933"}},
         totals = {"marker":{"color":"#003366"}}
     ))
-    fig_waterfall.update_layout(title="
+    
+    # Updated Layout (Fixed Line Break Issue)
+    fig_waterfall.update_layout(
+        title="Working Capital Bridge (INR Cr)", 
+        height=300, 
+        margin=dict(l=0, r=0, t=30, b=0)
+    )
+    
+    st.plotly_chart(fig_waterfall, use_container_width=True)
+
+with c_road:
+    st.markdown("### 🗓️ 12-MONTH EXECUTION ROADMAP")
+    # Data for Gantt
+    df_gantt = pd.DataFrame([
+        dict(Task="Phase 1: Liquidity (Bulk Sales)", Start='2025-01-01', Finish='2025-03-30', Phase='Urgent'),
+        dict(Task="Vendor Payment Clearing", Start='2025-02-15', Finish='2025-04-01', Phase='Urgent'),
+        dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='2025-04-01', Finish='2025-08-30', Phase='Pivot'),
+        dict(Task="ERP Clean-up (AI Integration)", Start='2025-03-01', Finish='2025-06-01', Phase='Pivot'),
+        dict(Task="Launch 'Carbon Neutral' Phone", Start='2025-09-01', Finish='2025-12-31', Phase='Growth'),
+        dict(Task="CCTS Carbon Credit Trading", Start='2025-10-01', Finish='2025-12-31', Phase='Growth')
+    ])
+    
+    fig_gantt = px.timeline(
+        df_gantt, 
+        x_start="Start", 
+        x_end="Finish", 
+        y="Task", 
+        color="Phase",
+        color_discrete_map={"Urgent": "#cc0000", "Pivot": "#ff9900", "Growth": "#009933"}
+    )
+    fig_gantt.update_yaxes(autorange="reversed")
+    fig_gantt.update_layout(height=300, margin=dict(l=0, r=0, t=30, b=0))
+    st.plotly_chart(fig_gantt, use_container_width=True)
+
+# --- IMPACT METRICS ROW ---
+st.markdown("### 📊 PROJECTED IMPACT (FY26)")
+m1, m2, m3, m4 = st.columns(4)
+with m1:
+    st.markdown("""<p class="metric-value">INR 12 Cr</p><p class="metric-label">Immediate Cash Unlocked (Q1)</p>""", unsafe_allow_html=True)
+with m2:
+    st.markdown("""<p class="metric-value">85%</p><p class="metric-label">Target Factory Utilization</p>""", unsafe_allow_html=True)
+with m3:
+    st.markdown("""<p class="metric-value">Zero</p><p class="metric-label">Dependencies on 'Pure' Phone Sales</p>""", unsafe_allow_html=True)
+with m4:
+    st.markdown("""<p class="metric-value">New IP</p><p class="metric-label">EU CBAM & CCTS Compliant</p>""", unsafe_allow_html=True)
+
+# --- FOOTER ---
+st.markdown("""
+<div class="kicker-box">
+⚠️ IMMEDIATE DECISION REQUIRED: APPROVE LIQUIDATION OF 15,000 UNITS AT 0% MARGIN.<br>
+<i>Rationale: We are buying cash flow, not profit. This funds the JV transition.</i>
+</div>
+""", unsafe_allow_html=True)
