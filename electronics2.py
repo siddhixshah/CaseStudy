@@ -70,17 +70,17 @@ st.markdown("---")
 c1, c2 = st.columns([1, 2])
 
 with c1:
-    st.markdown("### 🛑 THE BLEED (PROBLEM)")
+    st.markdown("### 🛑 THE INERTIA TRAP (Problem Statement)")
     st.markdown("""
     <div class="problem-box">
-    <b>Cash Trap:</b> ₹25 Cr locked in depreciating inventory (Models X, Y).<br>
+    <b>Cash Trap:</b> ₹600 Cr locked in depreciating inventory.<br>
     <b>Asset Idle:</b> Factory running at 30% capacity.<br>
     <b>Brand:</b> Losing the "Feature War" to Xiaomi/Samsung.
     </div>
     """, unsafe_allow_html=True)
 
 with c2:
-    st.markdown("### 💡 THE PIVOT (INSIGHT)")
+    st.markdown("### 💡 THE VALUE SHIFT (Primary Insight)")
     st.markdown("""
     <div class="insight-box">
     <b>Stop fighting the "Specs War". Start fighting the "Ecosystem War".</b><br>
