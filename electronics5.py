@@ -57,6 +57,7 @@ st.markdown("""
 # --- HEADER ---
 st.title("XYZ MOBILES: FY25-26 STRATEGIC TURNAROUND")
 st.markdown("**OBJECTIVE:** Stabilize Cash Flow (Q1) -> Pivot Manufacturing (Q2) -> Rebrand as Green Tech (Q3)")
+st.markdown("**Team FinX-CASEino GT:** Siddhi Shah, Devansh Mehta, Harsh, Aryaman, Jash")
 
 st.markdown("---")
 
