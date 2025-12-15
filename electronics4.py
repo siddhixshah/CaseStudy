@@ -1,6 +1,6 @@
 """
 -----------------------------------------------------------------------------
-XYZ MOBILES: STRATEGIC TURNAROUND DASHBOARD (CASE STUDY ALIGNED)
+XYZ MOBILES: STRATEGIC TURNAROUND DASHBOARD (FINAL + DIGITAL DETOX)
 -----------------------------------------------------------------------------
 """
 
@@ -56,7 +56,7 @@ st.markdown("""
 
 # --- HEADER ---
 st.title("XYZ MOBILES: FY25-26 STRATEGIC TURNAROUND")
-st.markdown("**OBJECTIVE:** Stabilize Cash Flow (Q1) -> Pivot Manufacturing (Q2) -> Rebrand as Green Tech (Q3)")
+st.markdown("**OBJECTIVE:** Stabilize Cash Flow (Q1) -> Pivot Manufacturing (Q2) -> Rebrand as 'Digital Wellness' (Q3)")
 
 st.markdown("---")
 
@@ -69,7 +69,8 @@ with c1:
     <div class="problem-box">
     <b>Cash Trap:</b> INR 600 Cr locked in unsold inventory.<br>
     <b>Debt Load:</b> INR 1,200 Cr concern for solvency.<br>
-    <b>Asset Idle:</b> Noida & Pune plants running below capacity.
+    <b>Asset Idle:</b> Noida & Pune plants running at 30% capacity.<br>
+    <b>Brand:</b> Losing the "Feature War" to Xiaomi/Samsung.
     </div>
     """, unsafe_allow_html=True)
 
@@ -77,10 +78,10 @@ with c2:
     st.markdown("### 💡 THE VALUE SHIFT (Primary Insight)")
     st.markdown("""
     <div class="insight-box">
-    <b>Stop fighting the "Specs War". Start fighting the "Ecosystem War".</b><br>
-    We cannot win on <i>Selling Phones</i> right now. We win by:<br>
+    <b>Stop fighting the "Specs War". Start fighting the "Attention War".</b><br>
+    We cannot win on "More Screens." We win on "Less Distraction."<br>
     1. <b>Pivot to Contract Manufacturing:</b> Lease idle Noida/Pune lines to 'China+1' players.<br>
-    2. <b>Positioning Brand:</b> Move from "Confused Mid-Market" to <b>"Sustainability (Green Tech)."</b>
+    2. <b>Positioning Brand:</b> The <b>"Right to Disconnect"</b> Phone for Gen Z. (Green Tech + Mental Wellness).
     </div>
     """, unsafe_allow_html=True)
 
@@ -96,9 +97,10 @@ with c_p1:
     <i>Goal: Unlock INR 50 Cr (Emergency Fund)</i>
     <hr style="margin:5px 0;">
     <ul>
-    <li><b>Corporate Bulk Exit:</b> Liquidate 6% of stock (~45k units) to B2B/Logistics firms. <b>Target: INR 35 Cr.</b></li>
-    <li><b>Logistics Consolidation:</b> Merge vendor contracts to stop the INR 45 Cr/yr leakage. <b>Save INR 5 Cr in Q1.</b></li>
-    <li><b>Coupon Lock-in:</b> Issue <b>INR 5k Deferred Coupons</b> to replace cash discounts, preserving margins.</li>
+    <li><b>Corporate Bulk Exit:</b> Liquidate 6% of stock (~45k units) to B2B/Logistics/Pharma (e.g., Delhivery, Sun Pharma). <b>Price: At Cost.</b></li>
+    <li><b>Spare Parts Harvest:</b> Dismantle 'Dead Stock'. Reuse screens/batteries for Service Centers (Save 15% procurement cost).</li>
+    <li><b>Logistics Consolidation:</b> Merge vendor contracts to stop INR 45 Cr/yr leakage. <b>Save INR 5 Cr in Q1.</b></li>
+    <li><b>Coupon Lock-in:</b> Sell old units at 10-15% discount + <b>INR 5k 'Future Value' Coupon</b>. <br><i>(Minimizes immediate paper loss; lowers CAC for future products).</i></li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -111,8 +113,8 @@ with c_p2:
     <hr style="margin:5px 0;">
     <ul>
     <li><b>JV Strategy:</b> "Complement, Don't Compete." Partner with <b>Sunwoda</b> (Batteries) or <b>Lianchuang</b> (Optics).</li>
-    <li><b>Asset Pivot:</b> Dedicate the <b>Pune Facility</b> entirely to 'Contract Manufacturing' (White Label).</li>
-    <li><b>China+1 Play:</b> Pitch our factory as the "Indian Hub" for component makers avoiding tariffs.</li>
+    <li><b>Nvidia/AI Angle:</b> Pivot Pune Facility to <b>White Label / Contract Manufacturing</b> for Edge AI (OSAT). High-margin assembly.</li>
+    <li><b>China+1 Play:</b> Pitch our factory as the "Indian Assembly Hub" for component makers avoiding tariffs.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -120,13 +122,13 @@ with c_p2:
 with c_p3:
     st.markdown("""
     <div class="strategy-card">
-    <b>3. BRAND (The Green Differentiator)</b><br>
-    <i>Goal: New Revenue Stream via Carbon</i>
+    <b>3. BRAND (The 'Disconnect' Differentiator)</b><br>
+    <i>Goal: Own the 'Gen Z Minimalist' Niche</i>
     <hr style="margin:5px 0;">
     <ul>
-    <li><b>EU CBAM Readiness:</b> Prepare for European 'Carbon Border Tax'. Become the <i>only</i> India-ready exporter.</li>
-    <li><b>CCTS Revenue:</b> Earn & Trade credits on the <b>Indian Carbon Market</b> by solar-roofing the Noida plant.</li>
-    <li><b>The "Carbon-Neutral" Phone:</b> Marketing USP for Gen Z. "This phone planted 10 trees."</li>
+    <li><b>The "Zen" Phone:</b> A stylish Feature Phone for Youth. <br><i>"Smart enough for UPI/Maps. Dumb enough for Peace."</i></li>
+    <li><b>USP:</b> #RightToDisconnect. 4G-enabled but <b>No Social Media/Tracking.</b></li>
+    <li><b>Green & Serene:</b> Carbon-Neutral manufacturing (CCTS/Solar) + Mental Wellness branding.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -144,12 +146,12 @@ st.markdown("""
   <tr>
     <td><b>SUNWODA</b><br>(Batteries/Power)</td>
     <td>Needs immediate capacity for EV/Power Walls in India; building new plants takes 18 months.</td>
-    <td>"We give you Pune Line 2 for <b>Battery Assembly</b> immediately. Zero Capex for you."</td>
+    <td>"We give you Pune Line 2 for <b>Battery & Wireless Charging Coil</b> assembly immediately. Zero Capex."</td>
     <td><b>40%</b> Util.</td>
   </tr>
   <tr>
     <td><b>LIANCHUANG</b><br>(Optics/Lenses)</td>
-    <td>Investing $50M in India but needs quick "Optical Module" assembly to supply Vivo/Oppo.</td>
+    <td>Investing $50M in India (Apr '25 news) but needs quick "Optical Module" assembly to supply Vivo/Oppo.</td>
     <td>"We become your <b>Precision Assembly Hub</b>. We handle the labor; you bring the tech."</td>
     <td><b>12%</b> Margin</td>
   </tr>
@@ -172,22 +174,24 @@ with c_fin:
     # Data for Waterfall
     fig_waterfall = go.Figure(go.Waterfall(
         name = "20", orientation = "v",
-        measure = ["relative", "relative", "relative", "relative", "relative", "relative", "total"],
+        measure = ["relative", "relative", "relative", "relative", "relative", "total"],
         x = ["Vendor Gap", "Bulk Sale", "Scrap Harvest", "Logistics Fix", "JV Deposit", "Net Cash"],
-        text = ["-50", "+35", "+5", "+5", "+10", "+5.0"],
+        text = ["-50", "+35", "+5", "+5", "+10", "<b>+5.0</b>"],
         y = [-50, 35, 5, 5, 10, 0],
         connector = {"line":{"color":"rgb(63, 63, 63)"}},
         decreasing = {"marker":{"color":"#cc0000"}},
         increasing = {"marker":{"color":"#009933"}},
-        totals = {"marker":{"color":"#003366"}}
+        totals = {"marker":{"color":"#0f2b46"}}
     ))
     
-    # Updated Layout
+    # Visual Tweaks for Visibility
     fig_waterfall.update_layout(
         title="Immediate Working Capital Bridge (INR Cr)", 
         height=300, 
-        margin=dict(l=0, r=0, t=30, b=0)
+        margin=dict(l=0, r=0, t=30, b=0),
+        yaxis=dict(range=[-55, 15]) 
     )
+    fig_waterfall.update_traces(textposition='outside', textfont_size=11)
     
     st.plotly_chart(fig_waterfall, use_container_width=True)
 
@@ -199,7 +203,7 @@ with c_road:
         dict(Task="Vendor Payment Clearing", Start='2025-02-15', Finish='2025-04-01', Phase='Urgent'),
         dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='2025-04-01', Finish='2025-08-30', Phase='Pivot'),
         dict(Task="ERP Clean-up (AI Integration)", Start='2025-03-01', Finish='2025-06-01', Phase='Pivot'),
-        dict(Task="Launch 'Carbon Neutral' Phone", Start='2025-09-01', Finish='2025-12-31', Phase='Growth'),
+        dict(Task="Launch 'Zen' Phone (Detox)", Start='2025-09-01', Finish='2025-12-31', Phase='Growth'),
         dict(Task="CCTS Carbon Credit Trading", Start='2025-10-01', Finish='2025-12-31', Phase='Growth')
     ])
     
