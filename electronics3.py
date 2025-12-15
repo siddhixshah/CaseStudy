@@ -67,7 +67,7 @@ with c1:
     st.markdown("### 🛑 THE INERTIA TRAP (Problem Statement)")
     st.markdown("""
     <div class="problem-box">
-    <b>Cash Trap:</b> INR 25 Cr locked in depreciating inventory.<br>
+    <b>Cash Trap:</b> INR 600Cr locked in depreciating inventory.<br>
     <b>Asset Idle:</b> Factory running at 30% capacity.<br>
     <b>Brand:</b> Losing the "Feature War" to Xiaomi/Samsung.
     </div>
