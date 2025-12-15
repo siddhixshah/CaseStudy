@@ -81,7 +81,7 @@ with c2:
     <b>Stop fighting the "Specs War". Start fighting the "Ecosystem War".</b><br>
     We cannot win on <i>Selling Phones</i> right now. We win by:<br>
     1. <b>Pivot to Contract Manufacturing:</b> Lease idle Noida/Pune lines to 'China+1' players.<br>
-    2. <b>Positioning Brand</b> where they aren't: <b>Sustainability (Green Tech).</b>
+    2. <b>Positioning Brand</b> where they aren't: <b>Sustainability (Green Tech).<br>
     3. <b>The "Digital Detox" Pivot:</b> Turn our legacy tech (Line 1) into a <b>Wellness Advantage.</b> Don't sell lagging specs; sell the luxury of focus (#RightToDisconnect).
     </div>
     """, unsafe_allow_html=True)
