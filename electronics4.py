@@ -230,4 +230,6 @@ with m4:
 st.markdown("""
 <div class="kicker-box">
 ⚠️ IMMEDIATE DECISION REQUIRED: APPROVE LIQUIDATION OF 15,000 UNITS AT 0% MARGIN.<br>
-<i>Rationale: We are buying cash flow, not profit
+<i>Rationale: We are buying cash flow, not profit. This funds the JV transition.</i>
+</div>
+""", unsafe_allow_html=True)
