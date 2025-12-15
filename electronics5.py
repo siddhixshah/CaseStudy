@@ -97,7 +97,7 @@ with c_p1:
     <i>Goal: Unlock INR 50 Cr (Emergency Fund)</i>
     <hr style="margin:5px 0;">
     <ul>
-    <li><b>Corporate Bulk Exit:</b> Liquidate 6% of stock (~45k units) to B2B/Logistics/Pharma (e.g., Delhivery, Sun Pharma). <b>Price: At Cost.</b></li>
+    <li><b>Corporate Bulk Exit:</b> Liquidate 6% of stock (~45k units) to B2B/Logistics/Pharma for field staff (e.g., Delhivery riders, Sun Pharma med reps). <b>Price: At Cost | Target : INR 35CR.</b></li>
     <li><b>Spare Parts Harvest:</b> Dismantle 'Dead Stock'. Reuse screens/batteries for Service Centers (Save 15% procurement cost).</li>
     <li><b>Logistics Consolidation:</b> Merge vendor contracts to stop INR 45 Cr/yr leakage. <b>Save INR 5 Cr in Q1.</b></li>
     <li><b>Coupon Lock-in:</b> Sell old units at 10-15% discount + <b>INR 5k 'Future Value' Coupon</b>. <br><i>(Minimizes immediate paper loss; lowers CAC for future products).</i></li>
