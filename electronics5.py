@@ -116,7 +116,7 @@ with c_p2:
     <li><b>JV Strategy:</b> "Complement, Don't Compete." Partner with <b>Sunwoda</b> (Batteries) or <b>Lianchuang</b> (Optics).</li>
     <li><b>Nvidia/AI Angle:</b> Pivot Pune Facility to <b>White Label / Contract Manufacturing</b> for Edge AI (OSAT). High-margin, low competition assembly.</li>
     <li><b>China+1 Play:</b> Pitch our factory as the "Indian Assembly Hub" for component makers avoiding tariffs.</li>
-    <li><b> Utilize legacy manufacturing units for feature phones:</b> Requires zero retooling for 5G, maximizing ROCE. Low Specs (~Low Direct Cost) + <b>Cognitive Luxury</b> = High Premium.</li>
+    <li><b> Utilize legacy manufacturing units for high-End Feature Phones:</b> Requires zero retooling for 5G, maximizing ROCE. Low Specs (~Low Direct Cost) + <b>Cognitive Luxury</b> = High Premium.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -131,7 +131,8 @@ with c_p3:
     <li><b>EU CBAM Readiness:</b> Prepare for European 'Carbon Border Tax'. Become the <i>only</i> India-ready exporter.</li>
     <li><b>CCTS Revenue:</b> Earn & Trade credits on the <b>Indian Carbon Market</b> by solar-roofing the Noida plant.</li>
     <li><b>The "Carbon-Neutral" Phone:</b> Marketing USP for Gen Z. Box Display: <i>"This phone planted 10 trees; generated 45kg CO2, offset to 0kg."</i></li>
-    <li><b>The "Zen" Phone:</b> A high-end feature phone for the burnt-out youth. Features : 5G (UPI/Maps), E-Ink/OLED, <b>No Social Media.</b> Slogan: <i>"Smart enough for payments. Dumb enough for peace."</i></li>
+    <li><b>The "Zen" Phone:</b> Curated OS for the burnt-out youth. Luxury in Focus and Attention. Increases friction for dopamine (No Social Media, Reading-specific Browsing modes), removes friction for utility (UPI/Maps, E-Ink/OLED, AI-Voice, Multi-day battery, tough build).</li>
+    <i>Position "missing features" as premium exclusions.</i> Branding: <i>"Smart enough for payments. Dumb enough for peace."</i></li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
