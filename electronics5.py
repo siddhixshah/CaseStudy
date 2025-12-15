@@ -82,6 +82,7 @@ with c2:
     We cannot win on <i>Selling Phones</i> right now. We win by:<br>
     1. <b>Pivot to Contract Manufacturing:</b> Lease idle Noida/Pune lines to 'China+1' players.<br>
     2. <b>Positioning Brand</b> where they aren't: <b>Sustainability (Green Tech).</b>
+    3. <b>The "Digital Detox" Pivot:</b> Turn our legacy tech (Line 1) into a <b>Wellness Advantage.</b> Don't sell lagging specs; sell the luxury of focus (#RightToDisconnect).
     </div>
     """, unsafe_allow_html=True)
 
@@ -113,7 +114,7 @@ with c_p2:
     <hr style="margin:5px 0;">
     <ul>
     <li><b>JV Strategy:</b> "Complement, Don't Compete." Partner with <b>Sunwoda</b> (Batteries) or <b>Lianchuang</b> (Optics).</li>
-    <li><b>Nvidia/AI Angle:</b> Pivot Pune Facility to <b>White Label / Contract Manufacturing</b> for Edge AI (OSAT). High-margin assembly.</li>
+    <li><b>Nvidia/AI Angle:</b> Pivot Pune Facility to <b>White Label / Contract Manufacturing</b> for Edge AI (OSAT). High-margin, low competition assembly.</li>
     <li><b>China+1 Play:</b> Pitch our factory as the "Indian Assembly Hub" for component makers avoiding tariffs.</li>
     </ul>
     </div>
@@ -122,13 +123,14 @@ with c_p2:
 with c_p3:
     st.markdown("""
     <div class="strategy-card">
-    <b>3. BRAND (The Green Differentiator)</b><br>
-    <i>Goal: New Revenue Stream via Carbon</i>
+    <b>3. BRAND (The Differentiator)</b><br>
+    <i>Goal: New Revenue Stream via Carbon Compliance & Feature Phones</i>
     <hr style="margin:5px 0;">
     <ul>
     <li><b>EU CBAM Readiness:</b> Prepare for European 'Carbon Border Tax'. Become the <i>only</i> India-ready exporter.</li>
     <li><b>CCTS Revenue:</b> Earn & Trade credits on the <b>Indian Carbon Market</b> by solar-roofing the Noida plant.</li>
     <li><b>The "Carbon-Neutral" Phone:</b> Marketing USP for Gen Z. Box Display: <i>"This phone planted 10 trees; generated 45kg CO2, offset to 0kg."</i></li>
+    <li><b>The "Zen" Phone:</b> A high-end feature phone for the burnt-out youth. Features : 5G (UPI/Maps), E-Ink/OLED, <b>No Social Media.</b> Slogan: <i>"Smart enough for payments. Dumb enough for peace."</i></li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
