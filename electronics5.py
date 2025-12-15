@@ -82,7 +82,7 @@ with c2:
     We cannot win on <i>Selling Phones</i> right now. We win by:<br>
     1. <b>Pivot to Contract Manufacturing:</b> Lease idle Noida/Pune lines to 'China+1' players.<br>
     2. <b>Positioning Brand</b> where they aren't: <b>Sustainability (Green Tech).<br>
-    3. <b>New PMF:</b> Capitalize on #RightToDisconnect Bill by competing on <i>Less Features</i>. Potential <b>₹250 Cr Blue Ocean</b> pan-India.
+    3. <b>New PMF:</b> Capitalize on #RightToDisconnect Bill by competing on <i>Less Features</i>. Potential <b>₹250 Cr Blue Ocean</b> pan-India.<br>
     </div>
     """, unsafe_allow_html=True)
 
@@ -116,7 +116,7 @@ with c_p2:
     <li><b>JV Strategy:</b> "Complement, Don't Compete." Partner with <b>Sunwoda</b> (Batteries) or <b>Lianchuang</b> (Optics).</li>
     <li><b>Nvidia/AI Angle:</b> Pivot Pune Facility to <b>White Label / Contract Manufacturing</b> for Edge AI (OSAT). High-margin, low competition assembly.</li>
     <li><b>China+1 Play:</b> Pitch our factory as the "Indian Assembly Hub" for component makers avoiding tariffs.</li>
-    <li><b> Utilize legacy manufacturing units for feature phones:</b> Requires zero retooling for 5G, maximizing ROCE. Low Specs (~Low Direct Cost) + <b>Cognitive Luxury</b> = High Premium. .</li>
+    <li><b> Utilize legacy manufacturing units for feature phones:</b> Requires zero retooling for 5G, maximizing ROCE. Low Specs (~Low Direct Cost) + <b>Cognitive Luxury</b> = High Premium.</li>
     </ul>
     </div>
     """, unsafe_allow_html=True)
