@@ -131,7 +131,7 @@ with c_p3:
     <li><b>EU CBAM Readiness:</b> Prepare for European 'Carbon Border Tax'. Become the <i>only</i> India-ready exporter.</li>
     <li><b>CCTS Revenue:</b> Earn & Trade credits on the <b>Indian Carbon Market</b> by solar-roofing the Noida plant.</li>
     <li><b>The "Carbon-Neutral" Phone:</b> Marketing USP for Gen Z. Box Display: <i>"This phone planted 10 trees; generated 45kg CO2, offset to 0kg."</i></li>
-    <li><b>The "Zen" Phone:</b> Curated OS for the burnt-out youth. Luxury in Focus and Attention. Increases friction for dopamine (No Social Media, Reading-specific Browsing modes), removes friction for utility (UPI/Maps, E-Ink/OLED, AI-Voice, Multi-day battery, tough build).</li>
+    <li><b>The "Zen" Phone:</b> Curated OS for the burnt-out youth. Luxury in Focus and Attention. Increases friction for dopamine (No Social Media, Reading-specific Browsing modes), removes friction for utility (UPI/Maps, E-Ink/OLED, AI-Voice, Multi-day battery, tough build).<br>
     <i>Position "missing features" as premium exclusions.</i> Branding: <i>"Smart enough for payments. Dumb enough for peace."</i></li>
     </ul>
     </div>
