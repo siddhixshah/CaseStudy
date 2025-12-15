@@ -207,7 +207,7 @@ with c_road:
         dict(Task="Vendor Payment Clearing", Start='2025-02-15', Finish='2025-04-01', Phase='Urgent'),
         dict(Task="JV Setup (Sunwoda/Lianchuang)", Start='2025-04-01', Finish='2025-08-30', Phase='Pivot'),
         dict(Task="ERP Clean-up (AI Integration)", Start='2025-03-01', Finish='2025-06-01', Phase='Pivot'),
-        dict(Task="Launch 'Carbon Neutral' Phone", Start='2025-09-01', Finish='2025-12-31', Phase='Growth'),
+        dict(Task="Launch 'Carbon Neutral' & 'Zen' Phones", Start='2025-09-01', Finish='2025-12-31', Phase='Growth'),
         dict(Task="CCTS Carbon Credit Trading", Start='2025-10-01', Finish='2025-12-31', Phase='Growth')
     ])
     
